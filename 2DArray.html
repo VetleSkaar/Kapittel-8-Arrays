@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Vetle Skaar -->
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<meta type="author" content="Vetle Skaar">
+		<style></style>
+        <title></title>
+        <!--link rel="stylesheet" type="text/css" href="stil.css"-->
+	</head>
+	<body>
+        <script>
+            
+            var frame = [],
+                i=0;
+            
+            function nyttArr(fag, karakter, type, år){ //frame et nytt array i "frame"
+                frame[i] = [fag, karakter, type, år];
+                i++;
+            }
+            
+            function slettArr(){ //sletter det forrige arrayet lagt til i "frame"
+                i--;
+                frame[i] = [];
+            }
+            
+            function sorter(){
+                frame.sort(function(a,b){
+                    return (Number(a[1]) - Number(b[1]));
+                })
+            }
+
+            nyttArr("norsk","5","Eksamen","2013");
+            nyttArr("matte","4","Muntlig","2017");
+            nyttArr("engelsk","2","Standpunkt","2015");
+            nyttArr("it","6","Eksamen","2017");
+            
+            
+            //function recall(){
+            //    return frame;
+            //}
+            
+            //function setArray(lengde){
+            //    var arr = new Array();    
+            //    for(var i=0; i<lengde; i++){
+            //        arr[i] = [];
+            //    } 
+            //    return arr;
+            //}
+            
+            
+        </script>
+	</body>
+</html>
